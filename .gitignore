@@ -1,0 +1,2 @@
+/kibana/certs/*.crt
+/kibana/certs/*.key
