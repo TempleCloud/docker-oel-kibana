@@ -2,9 +2,8 @@ FROM oraclelinux:7.2
 
 MAINTAINER Timothy Langford
 
-<<<<<<< 9e085055c6c97428ea60080068c02af84b41381d
 RUN yum -y update
-RUN yum -y install wget
+RUN yum -y install wget tar
 
 # Install Oracle Java
 RUN wget --no-cookies \
@@ -14,10 +13,6 @@ RUN wget --no-cookies \
 RUN yum -y localinstall jre-8u65-linux-x64.rpm
 RUN rm -f jre-8u65-linux-x64.rpm
 ENV JAVA_HOME=/usr/java/jre1.8.0_65
-=======
-# RUN yum -y update
-RUN yum -y install tar
->>>>>>> Initial checkin. Basic Kibana OEL Dockerfile.
 
 # Install Elasticsearch
 ENV KIBANA_HOME=/opt/kibana
